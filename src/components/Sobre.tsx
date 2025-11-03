@@ -25,21 +25,17 @@ const Sobre = () => {
             {/* Conteúdo */}
             <div className="md:col-span-3 space-y-6 fade-in-up delay-200">
               <p className="text-lg leading-relaxed text-foreground">
-                <strong>Eliene Marçal</strong> é professora, palestrante e mentora espiritual 
-                dedicada a ajudar mulheres a encontrarem cura emocional e restauração em Deus.
-              </p>
-              
-              <p className="text-lg leading-relaxed text-foreground">
-                Com mais de 15 anos de experiência em aconselhamento pastoral e desenvolvimento 
-                pessoal, ela já impactou milhares de vidas através de seus cursos, palestras e 
-                mentorias.
-              </p>
-              
-              <p className="text-lg leading-relaxed text-foreground">
-                Seu trabalho combina profundidade bíblica com sabedoria prática, criando 
-                um caminho seguro para mulheres que desejam superar traumas, quebrar ciclos 
-                de dor e viver em plenitude.
-              </p>
+                 <strong> Eliene Marçal </strong> é fundadora e líder do Ministério Gerando Vidas nas Nações, iniciado em 2016 em Goiânia/GO. Seu encontro com Jesus aos 16 anos transformou sua vida e a levou a buscar sabedoria na Palavra, tornando-se referência em aconselhamento para mulheres.
+                </p>
+                <p>
+                  Após viver um casamento abusivo, enfrentar divórcio, criar duas filhas sozinha e superar lutas financeiras e emocionais, Eliene aprendeu a se posicionar como edificadora do lar e hoje compartilha seus aprendizados para fortalecer outras famílias.
+                </p>
+                <p>
+                  Com mais de 30 anos de caminhada no evangelho, participou de seminários e conferências com nomes como Dave Roberson, Mike Murdock e John C. Maxwell, além de atuar como Conselheira e Intercessora no Ministério SILC de 2017 a 2023.
+                </p>
+                <p>
+                  Em 2019, após 20 anos de espera em Deus, viveu um recomeço ao se casar com Edson Luís Vachiano Filho. Hoje, como Apóstola, testemunha que independente do passado, Deus sempre tem um lugar de restituição e recomeço.
+                </p>
               
               <div className="p-6 rounded-lg italic text-center"
                    style={{ backgroundColor: 'hsl(var(--earth-gold) / 0.1)' }}>
