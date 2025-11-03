@@ -1,22 +1,82 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import aula1 from "@/images/1.webp";
+import aula2 from "@/images/2.webp";
+import aula3 from "@/images/3.webp";
+import aula4 from "@/images/4.webp";
+import aula5 from "@/images/5.webp";
+import aula6 from "@/images/6.webp";
+import aula7 from "@/images/7.webp";
+import aula8 from "@/images/8.webp";
+import aula9 from "@/images/9.webp";
+import aula10 from "@/images/10.webp";
+import aula11 from "@/images/11.webp";
+import aula12 from "@/images/12.webp";
 
 const Curso = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const modulos = [
-    { titulo: "Módulo 1: Fundamentos da Cura", descricao: "Compreenda o plano de Deus para sua restauração" },
-    { titulo: "Módulo 2: Identificando Feridas", descricao: "Reconheça as raízes da dor emocional" },
-    { titulo: "Módulo 3: O Poder do Perdão", descricao: "Liberte-se através do perdão genuíno" },
-    { titulo: "Módulo 4: Quebrando Ciclos", descricao: "Rompa padrões que aprisionam sua vida" },
-    { titulo: "Módulo 5: Reconstruindo a Identidade", descricao: "Descubra quem você é em Cristo" },
-    { titulo: "Módulo 6: Cura das Emoções", descricao: "Restaure seu mundo emocional" },
-    { titulo: "Módulo 7: Relacionamentos Saudáveis", descricao: "Construa vínculos baseados na verdade" },
-    { titulo: "Módulo 8: Liberdade Interior", descricao: "Experimente a verdadeira liberdade" },
-    { titulo: "Módulo 9: Propósito Restaurado", descricao: "Redescubra seu chamado e destino" },
-    { titulo: "Módulo 10: Vivendo em Plenitude", descricao: "Caminhe na plenitude que Deus preparou" },
-    { titulo: "Módulo 11: Mantendo a Cura", descricao: "Estabeleça fundamentos duradouros" },
-    { titulo: "Módulo 12: Seu Novo Começo", descricao: "Celebre sua transformação e viva renovada" },
+    { 
+      titulo: "Módulo 1: Aliança e Identidade", 
+      descricao: "Descubra quem você é em Deus. Refaça sua aliança espiritual e desperte a mulher que Ele te chamou para ser.",
+      imagem: aula1
+    },
+    { 
+      titulo: "Módulo 2: Perdão", 
+      descricao: "Liberte o passado. Encerre ciclos de dor e entenda o poder libertador do perdão verdadeiro.",
+      imagem: aula2
+    },
+    { 
+      titulo: "Módulo 3: Reconstrução", 
+      descricao: "Aprenda a reconstruir sua vida emocional e espiritual com base em pilares firmes: fé, propósito e autocompaixão.",
+      imagem: aula3
+    },
+    { 
+      titulo: "Módulo 4: Tempo de Espera", 
+      descricao: "Encontre descanso no processo. Transforme a espera em fortalecimento e confiança no tempo perfeito de Deus.",
+      imagem: aula4
+    },
+    { 
+      titulo: "Módulo 5: Posicionamento", 
+      descricao: "Descubra como se colocar no centro da sua própria vida, com limites saudáveis e sabedoria emocional.",
+      imagem: aula5
+    },
+    { 
+      titulo: "Módulo 6: Autogoverno", 
+      descricao: "Domine suas emoções e decisões. Desenvolva clareza mental e espiritual para guiar sua jornada com propósito.",
+      imagem: aula6
+    },
+    { 
+      titulo: "Módulo 7: Sexo e Desligamento de Alma", 
+      descricao: "Restaure sua pureza emocional. Feche portas espirituais do passado e viva uma nova fase de liberdade interior.",
+      imagem: aula7
+    },
+    { 
+      titulo: "Módulo 8: Mulher Virtuosa", 
+      descricao: "Compreenda o verdadeiro significado da virtude. Seja forte, sensível e plena na sua essência feminina.",
+      imagem: aula8
+    },
+    { 
+      titulo: "Módulo 9: Princípios do Casamento", 
+      descricao: "Entenda o amor como extensão da sua cura. Descubra como relacionar-se de forma saudável — inclusive consigo mesma.",
+      imagem: aula9
+    },
+    { 
+      titulo: "Módulo 10: Vida Espiritual na Prática", 
+      descricao: "Transforme fé em ação. Leve a presença de Deus para as decisões, rotinas e desafios do seu dia a dia.",
+      imagem: aula10
+    },
+    { 
+      titulo: "Módulo 11: Propósito", 
+      descricao: "Encontre direção. Alinhe seus dons e talentos ao propósito que Deus reservou para sua vida.",
+      imagem: aula11
+    },
+    { 
+      titulo: "Módulo 12: Transformação e Continuidade", 
+      descricao: "Celebre o novo tempo. Aprenda a manter sua fé, sua força e sua essência em constante evolução.",
+      imagem: aula12
+    },
   ];
 
   const nextSlide = () => {
@@ -43,14 +103,30 @@ const Curso = () => {
           
           {/* Carrossel */}
           <div className="relative fade-in-up delay-200">
-            <div className="overflow-hidden rounded-xl bg-white/10 backdrop-blur-sm p-8 md:p-12">
-              <div className="text-center text-white min-h-[200px] flex flex-col justify-center">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                  {modulos[currentSlide].titulo}
-                </h3>
-                <p className="text-lg md:text-xl opacity-90">
-                  {modulos[currentSlide].descricao}
-                </p>
+            <div className="overflow-hidden rounded-xl bg-white/10 backdrop-blur-sm p-6 md:p-8">
+              <div className="flex flex-col items-center">
+                {/* Título acima da imagem */}
+                <div className="w-full text-center text-white mb-6">
+                  <h3 className="text-2xl md:text-3xl font-bold">
+                    {modulos[currentSlide].titulo}
+                  </h3>
+                </div>
+                
+                {/* Imagem do módulo - Proporcional e não cortada */}
+                <div className="w-full max-w-md mx-auto mb-6">
+                  <img 
+                    src={modulos[currentSlide].imagem} 
+                    alt={modulos[currentSlide].titulo}
+                    className="w-full h-auto max-h-96 object-contain rounded-lg"
+                  />
+                </div>
+                
+                {/* Descrição abaixo da imagem */}
+                <div className="w-full text-center text-white">
+                  <p className="text-lg md:text-xl opacity-90 leading-relaxed max-w-2xl mx-auto">
+                    {modulos[currentSlide].descricao}
+                  </p>
+                </div>
               </div>
             </div>
             

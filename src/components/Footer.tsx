@@ -62,22 +62,13 @@ const Footer = () => {
             <a href="#investimento" className="hover:text-white transition-colors">
               Investimento
             </a>
-            <a href="/privacidade" className="hover:text-white transition-colors">
-              Política de Privacidade
-            </a>
-            <a href="/termos" className="hover:text-white transition-colors">
-              Termos de Uso
-            </a>
+
           </div>
           
           {/* Direitos */}
           <div className="border-t border-white/10 pt-8">
             <p className="text-white/60 text-sm">
               © 2025 Eliene Marçal | Todos os direitos reservados
-            </p>
-            <p className="text-white/40 text-xs mt-2">
-              CNPJ: 00.000.000/0000-00 | Este site não faz parte do Facebook ou Instagram. 
-              Não somos afiliados ao Facebook ou Instagram de nenhuma forma.
             </p>
           </div>
         </div>

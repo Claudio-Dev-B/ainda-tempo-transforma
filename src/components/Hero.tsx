@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import Prancheta_1 from "@/images/Prancheta-1.webp";
+import Eliene from "@/images/eliene.webp";
 
 const Hero = () => {
   const scrollToInvestimento = () => {
@@ -8,17 +10,25 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" 
-             style={{ background: 'var(--gradient-hero)' }}>
+    <section 
+      className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden hero-section" 
+      style={{ 
+        background: 'var(--gradient-hero)',
+        backgroundImage: `url(${Eliene})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       <div className="absolute inset-0 bg-black/10"></div>
       
-      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h1 className="section-title text-5xl md:text-6xl lg:text-7xl mb-6 fade-in-up">
+      <div className="container mx-auto px-4 pb-20 md:py-24 relative z-10">
+        <div className="max-w-4xl mx-auto text-center md:text-left md:ml-16 text-white">
+          <h1 className="section-title text-5xl md:text-6xl lg:text-7xl mb-4 md:mb-6 fade-in-up leading-tight">
             É hora de se reconstruir
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 opacity-90 fade-in-up delay-200 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg md:text-2xl mb-6 md:mb-8 opacity-90 fade-in-up delay-200 leading-snug max-w-2xl md:mx-0 mx-auto">
             Você não precisa carregar sozinha o peso da dor, da culpa e do vazio. 
             Deus preparou um caminho de cura e restauração para você.
           </p>
@@ -36,6 +46,19 @@ const Hero = () => {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <ArrowDown className="w-6 h-6 text-white/60" />
       </div>
+
+      <style>{`
+        .hero-section {
+          background-image: url(${Eliene}) !important;
+        }
+        
+        @media (min-width: 768px) {
+          .hero-section {
+            background-image: url(${Prancheta_1}) !important;
+            background-position: left !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };

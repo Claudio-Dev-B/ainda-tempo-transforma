@@ -14,7 +14,7 @@ const Sobre = () => {
                 <div className="w-full h-full rounded-full overflow-hidden shadow-2xl"
                      style={{ border: '4px solid hsl(var(--earth-gold))' }}>
                   <img 
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop" 
+                    src="src/images/eliene.webp" 
                     alt="Eliene Marçal"
                     className="w-full h-full object-cover"
                   />

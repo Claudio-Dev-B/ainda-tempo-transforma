@@ -19,100 +19,77 @@ const Investimento = () => {
             Quanto vale reconstruir sua vida em Deus?
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Opção Parcelada */}
-            <div className="bg-secondary p-8 rounded-xl shadow-lg border-2 border-transparent hover:border-primary transition-all fade-in-up delay-200">
-              <div className="text-center mb-6">
-                <p className="text-sm uppercase tracking-wide mb-2 text-muted-foreground">
-                  Parcelado
-                </p>
-                <div className="mb-4">
-                  <span className="text-5xl font-bold" style={{ color: 'hsl(var(--accent-red))' }}>
-                    12x
-                  </span>
-                  <br />
-                  <span className="text-4xl font-bold" style={{ color: 'hsl(var(--accent-red))' }}>
-                    R$ 97
-                  </span>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  ou R$ 997,00 à vista
-                </p>
-              </div>
-              
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Acesso imediato a todo conteúdo",
-                  "12 módulos completos",
-                  "60+ aulas práticas",
-                  "Materiais de apoio",
-                  "Bônus exclusivos",
-                  "1 ano de acesso"
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 flex-shrink-0" style={{ color: 'hsl(var(--earth-gold))' }} />
-                    <span className="text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            {/* Opção à Vista */}
-            <div className="p-8 rounded-xl shadow-lg border-2 relative overflow-hidden fade-in-up delay-300"
+          {/* Card Único */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <div className="rounded-xl shadow-2xl border-2 relative overflow-hidden fade-in-up delay-200"
                  style={{ 
                    backgroundColor: 'hsl(var(--earth-gold))', 
                    borderColor: 'hsl(var(--earth-dark))' 
                  }}>
-              <div className="absolute top-4 right-4 bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">
-                Melhor Oferta
+              
+              {/* Faixa Superior - VAGAS LIMITADAS */}
+              <div className="bg-green-600 text-white py-3 text-center">
+                <p className="text-lg font-bold uppercase tracking-wide">
+                  VAGAS LIMITADAS
+                </p>
               </div>
               
-              <div className="text-center mb-6 text-white">
-                <p className="text-sm uppercase tracking-wide mb-2 opacity-90">
-                  À Vista
-                </p>
-                <div className="mb-2">
-                  <span className="text-5xl font-bold">
-                    R$ 897
-                  </span>
+              <div className="p-8">
+                <div className="absolute top-20 right-4 bg-white text-green-600 px-4 py-1 rounded-full text-sm font-semibold transform -translate-y-2 md:translate-y-0">
+                  Melhor Oferta
                 </div>
-                <p className="text-lg font-semibold bg-white/20 inline-block px-4 py-1 rounded-full">
-                  Economize R$ 100
-                </p>
+                
+                <div className="text-center mb-8 text-white pt-4 md:pt-0">
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold block">
+                      12x de R$ 40,34
+                    </span>
+                    <span className="text-xl opacity-90">
+                      ou R$ 397 à vista
+                    </span>
+                  </div>
+                </div>
+                
+                <ul className="space-y-4 mb-8 max-w-md mx-auto">
+                  {[
+                    "Mais de 12 Módulos Completos",
+                    "Mais de 65 Aulas Gravadas", 
+                    "Metodologia Bíblica",
+                    "Aulas com Eliene Marçal",
+                    "Materiais Complementares",
+                    "Bônus Exclusivos: Mapa da Cura Emocional",
+                    "Acesso por 365 dias"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-center gap-3 text-white">
+                      <Check className="w-5 h-5 flex-shrink-0" />
+                      <span className="text-lg">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Botão com cor verde */}
+                <div className="text-center mb-6">
+                  <button 
+                    onClick={scrollToCheckout}
+                    className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 w-full max-w-md"
+                  >
+                    Quero começar minha transformação
+                  </button>
+                </div>
+                
+                {/* Garantia dentro do card */}
+                <div className="flex items-center justify-center gap-2 text-white/90 mb-4">
+                  <Shield className="w-5 h-5" />
+                  <p className="text-sm text-center">
+                    Garantia incondicional de 7 dias — Se não for para você, devolvemos 100% do valor
+                  </p>
+                </div>
               </div>
-              
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Tudo do plano parcelado",
-                  "Desconto especial à vista",
-                  "Sem juros ou taxas",
-                  "Economia garantida"
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-white">
-                    <Check className="w-5 h-5 flex-shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
           
-          {/* CTA Principal */}
+          {/* Mensagem de atenção */}
           <div className="text-center fade-in-up delay-400">
-            <button 
-              onClick={scrollToCheckout}
-              className="btn-hero mb-6"
-            >
-              Quero começar minha transformação
-            </button>
-            
-            <div className="flex items-center justify-center gap-2 text-muted-foreground mb-8">
-              <Shield className="w-5 h-5" />
-              <p className="text-sm">
-                Garantia incondicional de 7 dias — Se não for para você, devolvemos 100% do valor
-              </p>
-            </div>
-            
             <div className="max-w-2xl mx-auto p-6 bg-secondary rounded-lg">
               <p className="text-center text-foreground">
                 <strong>Atenção:</strong> Este é um investimento em você, em sua cura e em seu futuro. 

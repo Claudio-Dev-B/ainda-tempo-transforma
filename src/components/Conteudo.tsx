@@ -3,9 +3,9 @@ import { Check } from "lucide-react";
 const Conteudo = () => {
   const beneficios = [
     "12 módulos completos de transformação espiritual e emocional",
-    "Mais de 60 aulas práticas com base bíblica sólida",
+    "Mais de 60 aulas com base bíblica sólida",
     "Materiais de apoio e exercícios práticos para cada módulo",
-    "Bônus exclusivos: meditações guiadas e diário de cura",
+    "Bônus exclusivos: Mapa de Cura Emocional",
     "Acesso completo por 1 ano para você avançar no seu ritmo",
     "Comunidade de apoio com mulheres em jornada de cura",
   ];
